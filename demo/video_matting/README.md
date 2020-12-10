@@ -1,7 +1,7 @@
 ## MODNet - WebCam-Based Portrait Video Matting Demo
 This is a MODNet portrait video matting demo based on WebCam. It will call your local WebCam and display the matting results in real time.
 
-### Requirements
+### 1. Requirements
 The basic requirements for this demo are:
 - Ubuntu System
 - WebCam
@@ -11,7 +11,7 @@ The basic requirements for this demo are:
 **NOTE**: If your device does not satisfy the above conditions, please try our [online Colab demo](https://colab.research.google.com/drive/1Pt3KDSc2q7WxFvekCnCLD8P0gBEbxm6J?usp=sharing).
 
 
-### Introduction
+### 2. Introduction
 We use ~400 unlabeled video clips (divided into ~50,000 frames) downloaded from the internet to perform SOC to adapt MODNet to the video domain. Nonetheless, due to insufficient labeled training data (~3k labeled foregrounds), our model may still make errors in portrait semantics estimation under challenging scenes. Besides, this demo does not currently support the OFD trick, which will be provided soon.
 
 For a better experience, please:
@@ -21,7 +21,7 @@ For a better experience, please:
 *   do not be too close or too far from the WebCam
 *   do not move too fast
 
-### Run Demo
+### 3. Run Demo
 We recommend creating a new conda virtual environment to run this demo, as follow:
 
 1. Clone the MODNet repository:

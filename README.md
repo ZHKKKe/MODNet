@@ -23,8 +23,7 @@
 
 ## Video Matting Demo 
 We provide two real-time portrait video matting demos based on WebCam.   
-If you have an Ubuntu system, we recommend you to try the [offline demo](demo/video_matting/README.md) to get a higher *fps*. Otherwise, you can access the [online Colab demo](https://colab.research.google.com/drive/1Pt3KDSc2q7WxFvekCnCLD8P0gBEbxm6J?usp=sharing).
-
+If you have an Ubuntu system, we recommend you to try the [offline demo](demo/video_matting) to get a higher *fps*. Otherwise, you can access the [online Colab demo](https://colab.research.google.com/drive/1Pt3KDSc2q7WxFvekCnCLD8P0gBEbxm6J?usp=sharing).
 
 
 ## Image Matting Demo
@@ -37,6 +36,11 @@ It allows you to upload portrait images and predict/visualize/download the alpha
 ## TO DO
 - Release training code (scheduled in **Jan. 2021**)
 - Release PPM-100 validation benchmark (scheduled in **Feb. 2021**)
+
+
+## License
+This project is released under the [Creative Commons Attribution NonCommercial ShareAlike 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode) license.
+
 
 ## Acknowledgement
 We thank [City University of Hong Kong](https://www.cityu.edu.hk/) and [SenseTime](https://www.sensetime.com/) for their support to this project.
