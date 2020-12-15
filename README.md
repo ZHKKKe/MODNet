@@ -22,8 +22,10 @@
 
 
 ## Video Matting Demo 
-We provide two real-time portrait video matting demos based on WebCam.   
+We provide two real-time portrait video matting demos based on WebCam.  When using the demo, you can move the WebCam around at will. 
 If you have an Ubuntu system, we recommend you to try the [offline demo](demo/video_matting/webcam) to get a higher *fps*. Otherwise, you can access the [online Colab demo](https://colab.research.google.com/drive/1Pt3KDSc2q7WxFvekCnCLD8P0gBEbxm6J?usp=sharing).
+
+<img src="doc/gif/video_matting_demo.gif">
 
 
 ## Image Matting Demo
