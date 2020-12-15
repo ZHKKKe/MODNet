@@ -19,8 +19,17 @@ torch_transforms = transforms.Compose(
 print('Load pre-trained MODNet...')
 pretrained_ckpt = './pretrained/modnet_webcam_portrait_matting.ckpt'
 modnet = MODNet(backbone_pretrained=False)
-modnet = nn.DataParallel(modnet).cuda()
-modnet.load_state_dict(torch.load(pretrained_ckpt))
+modnet = nn.DataParallel(modnet)
+
+GPU = True if torch.cuda.device_count() > 0 else False
+if GPU:
+    print('Use GPU...')
+    modnet = modnet.cuda()
+    modnet.load_state_dict(torch.load(pretrained_ckpt))
+else:
+    print('Use CPU...')
+    modnet.load_state_dict(torch.load(pretrained_ckpt, map_location=torch.device('cpu')))
+
 modnet.eval()
 
 print('Init WebCam...')

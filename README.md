@@ -10,7 +10,7 @@
 </p>
 
 <div align="center">This is the official project of our paper <b>Is a Green Screen Really Necessary for Real-Time Portrait Matting?</b></div>
-<div align="center">MODNet is a <b>trimap-free</b> model for portrait matting in <b>real time</b> (on a single GPU).</div>
+<div align="center">MODNet is a <b>trimap-free</b> model for portrait matting in <b>real time</b> under <b>changing scenes</b>.</div>
 
 
 ---
@@ -23,7 +23,7 @@
 
 ## Video Matting Demo 
 We provide two real-time portrait video matting demos based on WebCam.   
-If you have an Ubuntu system, we recommend you to try the [offline demo](demo/video_matting) to get a higher *fps*. Otherwise, you can access the [online Colab demo](https://colab.research.google.com/drive/1Pt3KDSc2q7WxFvekCnCLD8P0gBEbxm6J?usp=sharing).
+If you have an Ubuntu system, we recommend you to try the [offline demo](demo/video_matting/webcam) to get a higher *fps*. Otherwise, you can access the [online Colab demo](https://colab.research.google.com/drive/1Pt3KDSc2q7WxFvekCnCLD8P0gBEbxm6J?usp=sharing).
 
 
 ## Image Matting Demo
