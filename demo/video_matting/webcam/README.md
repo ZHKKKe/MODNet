@@ -47,3 +47,6 @@ We recommend creating a new conda virtual environment to run this demo, as follo
     ```
     python -m demo.video_matting.webcam.run
     ```
+
+### 4. Acknowledgement
+We thank [@tkianai](https://github.com/tkianai) for his contribution to making this demo available for CPU use.
