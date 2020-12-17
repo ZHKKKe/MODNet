@@ -90,7 +90,7 @@ if __name__ == '__main__':
         im = F.interpolate(im, size=(im_rh, im_rw), mode='area')
 
         # inference
-        _, _, matte = modnet(im.cuda(), inference=False)
+        _, _, matte = modnet(im.cuda(), True)
 
         # resize and save matte
         matte = F.interpolate(matte, size=(im_h, im_w), mode='area')

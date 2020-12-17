@@ -52,7 +52,7 @@ while(True):
         frame_tensor = frame_tensor.cuda()
     
     with torch.no_grad():
-        _, _, matte_tensor = modnet(frame_tensor, inference=True)
+        _, _, matte_tensor = modnet(frame_tensor, True)
 
     matte_tensor = matte_tensor.repeat(1, 3, 1, 1)
     matte_np = matte_tensor[0].data.cpu().numpy().transpose(1, 2, 0)
