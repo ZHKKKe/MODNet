@@ -49,4 +49,4 @@ We recommend creating a new conda virtual environment to run this demo, as follo
     ```
 
 ### 4. Acknowledgement
-We thank [@tkianai](https://github.com/tkianai) for his contribution to making this demo available for CPU use.
+We thank [@tkianai](https://github.com/tkianai) and [@mazhar004](https://github.com/mazhar004) for their contributions to making this demo available for CPU use.
