@@ -47,8 +47,10 @@ while(True):
 
     frame_PIL = Image.fromarray(frame_np)
     frame_tensor = torch_transforms(frame_PIL)
-    frame_tensor = frame_tensor[None, :, :, :].cuda()
-
+    frame_tensor = frame_tensor[None, :, :, :]
+    if GPU:
+        frame_tensor = frame_tensor.cuda()
+    
     with torch.no_grad():
         _, _, matte_tensor = modnet(frame_tensor, inference=True)
 
