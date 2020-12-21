@@ -32,13 +32,13 @@ We recommend creating a new conda virtual environment to run this demo, as follo
 2. Download the pre-trained model from this [link](https://drive.google.com/file/d/1Nf1ZxeJZJL8Qx9KadcYYyEmmlKhTADxX/view?usp=sharing) and put it into the folder `MODNet/pretrained/`.
 
 
-3. Create a conda virtual environment named `modnet` (if it doesn't exist) and activate it:
+3. Create a conda virtual environment named `modnet` (if it doesn't exist) and activate it. Here we use `python=3.6` as an example:
      ```
     conda create -n modnet python=3.6
     source activate modnet
     ```
 
-4. Install the required python dependencies (here we use PyTorch==1.0.0):
+4. Install the required python dependencies (please make sure your CUDA version is supported by the PyTorch version installed):
     ```
     pip install -r demo/video_matting/webcam/requirements.txt
     ```
