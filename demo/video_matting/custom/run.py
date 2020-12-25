@@ -1,9 +1,8 @@
 import os
-
 import cv2
+import argparse
 import numpy as np
 from PIL import Image
-import argparse
 from tqdm import tqdm
 
 import torch
@@ -20,25 +19,10 @@ torch_transforms = transforms.Compose(
     ]
 )
 
-print('Load pre-trained MODNet...')
-pretrained_ckpt = './pretrained/modnet_webcam_portrait_matting.ckpt'
-modnet = MODNet(backbone_pretrained=False)
-modnet = nn.DataParallel(modnet)
 
-GPU = True if torch.cuda.device_count() > 0 else False
-if GPU:
-    print('Use GPU...')
-    modnet = modnet.cuda()
-    modnet.load_state_dict(torch.load(pretrained_ckpt))
-else:
-    print('Use CPU...')
-    modnet.load_state_dict(torch.load(pretrained_ckpt, map_location=torch.device('cpu')))
-modnet.eval()
-
-
-def offline_matting(video_path, save_path, alpha_matte=False, fps=30):
+def matting(video, result, alpha_matte=False, fps=30):
     # video capture
-    vc = cv2.VideoCapture(video_path)
+    vc = cv2.VideoCapture(video)
 
     if vc.isOpened():
         rval, frame = vc.read()
@@ -46,7 +30,7 @@ def offline_matting(video_path, save_path, alpha_matte=False, fps=30):
         rval = False
 
     if not rval:
-        print('Read video {} failed.'.format(video_path))
+        print('Failed to read the video: {0}'.format(video))
         exit()
 
     num_frame = vc.get(cv2.CAP_PROP_FRAME_COUNT)
@@ -54,7 +38,7 @@ def offline_matting(video_path, save_path, alpha_matte=False, fps=30):
 
     # video writer
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')
-    video_writer = cv2.VideoWriter(save_path, fourcc, fps, (w, h))
+    video_writer = cv2.VideoWriter(result, fourcc, fps, (w, h))
 
     print('Start matting...')
     with tqdm(range(int(num_frame)))as t:
@@ -85,22 +69,39 @@ def offline_matting(video_path, save_path, alpha_matte=False, fps=30):
             c += 1
 
     video_writer.release()
-    print('Save video to {}'.format(save_path))
+    print('Save the result video to {0}'.format(result))
     return
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--video_path', type=str, default='./sample/video.mp4')
-    parser.add_argument('--save_path', type=str, default='./sample/res.mp4', help='Video should be .mp4 format.')
-    parser.add_argument('--alpha_matte', action='store_true', default=False, help='If True, save alpha_matte video.')
-    parser.add_argument('--fps', type=int, default=30)
+    parser.add_argument('--video', type=str, required=True, help='input video file')
+    parser.add_argument('--result-type', type=str, default='fg', choices=['fg', 'matte'], 
+                        help='matte - save the alpha matte; fg - save the foreground')
+    parser.add_argument('--fps', type=int, default=30, help='fps of the result video')
 
+    print('Get CMD Arguments...')
     args = parser.parse_args()
 
-    if not args.save_path.endswith('.mp4'):
-        args.save_path = os.path.splitext(args.save_path)[0] + '.mp4'
+    if not os.path.exists(args.video):
+        print('Cannot find the input video: {0}'.format(args.video))
+        exit()
 
-    offline_matting(args.video_path, args.save_path, args.alpha_matte, args.fps)
+    print('Load pre-trained MODNet...')
+    pretrained_ckpt = './pretrained/modnet_webcam_portrait_matting.ckpt'
+    modnet = MODNet(backbone_pretrained=False)
+    modnet = nn.DataParallel(modnet)
 
+    GPU = True if torch.cuda.device_count() > 0 else False
+    if GPU:
+        print('Use GPU...')
+        modnet = modnet.cuda()
+        modnet.load_state_dict(torch.load(pretrained_ckpt))
+    else:
+        print('Use CPU...')
+        modnet.load_state_dict(torch.load(pretrained_ckpt, map_location=torch.device('cpu')))
+    modnet.eval()
 
+    result = os.path.splitext(args.video)[0] + '_{0}.mp4'.format(args.result_type)
+    alpha_matte = True if args.result_type == 'matte' else False
+    matting(args.video, result, alpha_matte, args.fps)
