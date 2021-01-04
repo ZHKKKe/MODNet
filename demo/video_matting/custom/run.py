@@ -35,6 +35,14 @@ def matting(video, result, alpha_matte=False, fps=30):
 
     num_frame = vc.get(cv2.CAP_PROP_FRAME_COUNT)
     h, w = frame.shape[:2]
+    if w >= h:
+        rh = 512
+        rw = int(w / h * 512)
+    else:
+        rw = 512
+        rh = int(h / w * 512)
+    rh = rh - rh % 32
+    rw = rw - rw % 32
 
     # video writer
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')
@@ -44,7 +52,7 @@ def matting(video, result, alpha_matte=False, fps=30):
     with tqdm(range(int(num_frame)))as t:
         for c in t:
             frame_np = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-            frame_np = cv2.resize(frame_np, (672, 512), cv2.INTER_AREA)
+            frame_np = cv2.resize(frame_np, (rw, rh), cv2.INTER_AREA)
 
             frame_PIL = Image.fromarray(frame_np)
             frame_tensor = torch_transforms(frame_PIL)
@@ -70,7 +78,6 @@ def matting(video, result, alpha_matte=False, fps=30):
 
     video_writer.release()
     print('Save the result video to {0}'.format(result))
-    return
 
 
 if __name__ == '__main__':
