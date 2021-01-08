@@ -24,7 +24,7 @@ class IBNorm(nn.Module):
         
     def forward(self, x):
         bn_x = self.bnorm(x[:, :self.bnorm_channels, ...].contiguous())
-        in_x = self.inorm(x[:, self.inorm_channels:, ...].contiguous())
+        in_x = self.inorm(x[:, self.bnorm_channels:, ...].contiguous())
 
         return torch.cat((bn_x, in_x), 1)
 
