@@ -1,7 +1,5 @@
 # Inference with onnxruntime
 
-Download [modnet.onnx](https://drive.google.com/file/d/1cgycTQlYXpTh26gB9FTnthE7AvruV8hd/view?usp=sharing)
-
 ### 1. Export onnx model
 
 Run the following command:
