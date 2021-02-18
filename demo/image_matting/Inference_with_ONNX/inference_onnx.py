@@ -110,7 +110,7 @@ if __name__ == '__main__':
     # Optional - save png image without background
     ##############################################
 
-    # im_PIL = Image.open(args.image_path)
-    # matte = Image.fromarray(matte)
-    # im_PIL.putalpha(matte)   # add alpha channel to keep transparency
-    # im_PIL.save('without_background.png')
+    im_PIL = Image.open(args.image_path)
+    matte = Image.fromarray(matte)
+    im_PIL.putalpha(matte)   # add alpha channel to keep transparency
+    im_PIL.save('without_background.png')
