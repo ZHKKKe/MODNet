@@ -1,18 +1,16 @@
 """
-This file is a modified version of the original file modnet.py without 
-"pred_semantic" and "pred_details" as these both returns None when "inference = True"
+This file contains a modified version of the original file `modnet.py` without 
+`pred_semantic` and `pred_details` as these both returns None when `inference=True`
 
-And it does not contain "inference" argument which will make it easier to 
-convert checkpoint into onnx model. 
-
-Refer: 'demo/image_matting/inference_with_ONNX/export_modnet_onnx.py' to export model.
+And it does not contain `inference` argument which will make it easier to 
+convert checkpoint to ONNX model. 
 """
 
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from .backbones import SUPPORTED_BACKBONES
+from src.models.backbones import SUPPORTED_BACKBONES
 
 
 #------------------------------------------------------------------------------

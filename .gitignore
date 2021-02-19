@@ -1,5 +1,6 @@
 # Temporary directories and files
 *.ckpt
+*.onnx
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

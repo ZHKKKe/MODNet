@@ -20,6 +20,7 @@ WebCam Video Demo [<a href="demo/video_matting/webcam">Offline</a>][<a href="htt
 
 
 ## News
+- [Feb 19 2021] Add [ONNX version](onnx) of MODNet (from the community).
 - [Jan&nbsp; 28 2021] Release the [code](src/trainer.py) of MODNet training iteration.
 - [Dec 25 2020] ***Merry Christmas!*** :christmas_tree: Release Custom Video Matting Demo [[Offline](demo/video_matting/custom)] for user videos.
 - [Dec 10 2020] Release WebCam Video Matting Demo [[Offline](demo/video_matting/webcam)][[Colab](https://colab.research.google.com/drive/1Pt3KDSc2q7WxFvekCnCLD8P0gBEbxm6J?usp=sharing)] and Image Matting Demo [[Colab](https://colab.research.google.com/drive/1GANpbKT06aEFiW-Ssx0DQnnEADcXwQG6?usp=sharing)].
@@ -53,6 +54,8 @@ You can try [this WebGUI](https://gradio.app/g/modnet) (hosted on [Gradio](https
 - **Colab Demo of Bokeh (Blur Background)**  
 You can try [this Colab demo](https://colab.research.google.com/github/eyaler/avatars4all/blob/master/yarok.ipynb) (built by [@eyaler](https://github.com/eyaler)) to blur the backgroud based on MODNet!
 
+- **ONNX Version of MODNet**  
+You can convert the pre-trained MODNet to an ONNX model by using [this code](onnx) (provided by [@manthan3C273](https://github.com/manthan3C273)). You can also try [this Colab demo](https://colab.research.google.com/drive/1P3cWtg8fnmu9karZHYDAtmm1vj1rgA-f?usp=sharing) for MODNet image matting (ONNX version).
 
 ## Code
 We provide the [code](src/trainer.py) of MODNet training iteration, including:
@@ -75,8 +78,8 @@ This project (code, pre-trained models, demos, *etc.*) is released under the [Cr
 ## Acknowledgement
 - We thank [City University of Hong Kong](https://www.cityu.edu.hk/) and [SenseTime](https://www.sensetime.com/) for their support to this project.  
 - We thank  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[the Gradio team](https://github.com/gradio-app/gradio), [@eyaler](https://github.com/eyaler),  
-for their cool applications based on MODNet.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[the Gradio team](https://github.com/gradio-app/gradio), [@eyaler](https://github.com/eyaler), [@manthan3C273](https://github.com/manthan3C273),  
+for their contributions to this repository or their cool applications based on MODNet.
 
 
 ## Citation

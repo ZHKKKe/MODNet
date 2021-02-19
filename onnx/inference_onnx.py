@@ -1,43 +1,40 @@
 """
-Inference with onnxruntime
+Inference ONNX model of MODNet
 
 Arguments:
-    --image-path --> path to single input image
-    --output-path --> paht to save generated matte
-    --model-path --> path to onnx model file
+    --image-path: path of the input image (a file)
+    --output-path: path for saving the predicted alpha matte (a file)
+    --model-path: path of the ONNX model
 
-example:
+Example:
 python inference_onnx.py \
-    --image-path=demo.jpg \
-    --output-path=matte.png \
-    --model-path=modnet.onnx
-
-Optional:
-Generate transparent image without background
+    --image-path=demo.jpg --output-path=matte.png --model-path=modnet.onnx
 """
+
 import os
-import argparse
 import cv2
+import argparse
 import numpy as np
+from PIL import Image
+
 import onnx
 import onnxruntime
-from onnx import helper
-from PIL import Image
+
 
 if __name__ == '__main__':
     # define cmd arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument('--image-path', type=str, help='path of input image')
-    parser.add_argument('--output-path', type=str, help='path of output image')
-    parser.add_argument('--model-path', type=str, help='path of onnx model')
+    parser.add_argument('--image-path', type=str, help='path of the input image (a file)')
+    parser.add_argument('--output-path', type=str, help='paht for saving the predicted alpha matte (a file)')
+    parser.add_argument('--model-path', type=str, help='path of the ONNX model')
     args = parser.parse_args()
 
     # check input arguments
     if not os.path.exists(args.image_path):
-        print('Cannot find input path: {0}'.format(args.image_path))
+        print('Cannot find the input image: {0}'.format(args.image_path))
         exit()
     if not os.path.exists(args.model_path):
-        print('Cannot find model path: {0}'.format(args.model_path))
+        print('Cannot find the ONXX model: {0}'.format(args.model_path))
         exit()
 
     ref_size = 512
@@ -105,12 +102,3 @@ if __name__ == '__main__':
     matte = cv2.resize(matte, dsize=(im_w, im_h), interpolation = cv2.INTER_AREA)
 
     cv2.imwrite(args.output_path, matte)
-
-    ##############################################
-    # Optional - save png image without background
-    ##############################################
-
-    # im_PIL = Image.open(args.image_path)
-    # matte = Image.fromarray(matte)
-    # im_PIL.putalpha(matte)   # add alpha channel to keep transparency
-    # im_PIL.save('without_background.png')
