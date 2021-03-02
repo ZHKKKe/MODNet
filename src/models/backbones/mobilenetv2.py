@@ -136,7 +136,7 @@ class MobileNetV2(nn.Module):
 		# Initialize weights
 		self._init_weights()
 
-	def forward(self, x, feature_names=None):
+	def forward(self, x):
 		# Stage1
 		x = self.features[0](x)
 		x = self.features[1](x)
