@@ -66,14 +66,15 @@ In the function comments, we provide examples of how to call the function.
 
 
 ## TODO
-- Release the code of One-Frame Delay (OFD)
-- Release PPM-100 validation benchmark (scheduled in **Feb 2021**)  
-**NOTE**: PPM-100 is a **validation set**. Our training set will not be published
+- Release the code of One-Frame Delay
+- Release PPM-100 validation benchmark (**Delayed, But On The Way...**)  
+**NOTE**: PPM-100 is a **validation set**. Our training set will not be published.
 
 
 ## License
-This project (code, pre-trained models, demos, *etc.*) is released under the [Creative Commons Attribution NonCommercial ShareAlike 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode) license.
+This project (**code, pre-trained models, demos, *etc.***) is released under the [Creative Commons Attribution NonCommercial ShareAlike 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode) license.
 
+**NOTE**: The license will be changed to allow commercial use after this work is accepted by a conference or a journal.
 
 ## Acknowledgement
 - We thank [City University of Hong Kong](https://www.cityu.edu.hk/) and [SenseTime](https://www.sensetime.com/) for their support to this project.  
