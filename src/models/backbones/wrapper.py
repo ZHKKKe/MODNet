@@ -36,38 +36,15 @@ class MobileNetV2Backbone(BaseBackbone):
         self.enc_channels = [16, 24, 32, 96, 1280]
 
     def forward(self, x):
-        # x = reduce(lambda x, n: self.model.features[n](x), list(range(0, 2)), x)
-        x = self.model.features[0](x)
-        x = self.model.features[1](x)
+        x = reduce(lambda x, n: self.model.features[n](x), list(range(0, 2)), x)
         enc2x = x
-
-        # x = reduce(lambda x, n: self.model.features[n](x), list(range(2, 4)), x)
-        x = self.model.features[2](x)
-        x = self.model.features[3](x)
+        x = reduce(lambda x, n: self.model.features[n](x), list(range(2, 4)), x)
         enc4x = x
-
-        # x = reduce(lambda x, n: self.model.features[n](x), list(range(4, 7)), x)
-        x = self.model.features[4](x)
-        x = self.model.features[5](x)
-        x = self.model.features[6](x)
+        x = reduce(lambda x, n: self.model.features[n](x), list(range(4, 7)), x)
         enc8x = x
-
-        # x = reduce(lambda x, n: self.model.features[n](x), list(range(7, 14)), x)
-        x = self.model.features[7](x)
-        x = self.model.features[8](x)
-        x = self.model.features[9](x)
-        x = self.model.features[10](x)
-        x = self.model.features[11](x)
-        x = self.model.features[12](x)
-        x = self.model.features[13](x)
+        x = reduce(lambda x, n: self.model.features[n](x), list(range(7, 14)), x)
         enc16x = x
-
-        # x = reduce(lambda x, n: self.model.features[n](x), list(range(14, 19)), x)
-        x = self.model.features[14](x)
-        x = self.model.features[15](x)
-        x = self.model.features[16](x)
-        x = self.model.features[17](x)
-        x = self.model.features[18](x)
+        x = reduce(lambda x, n: self.model.features[n](x), list(range(14, 19)), x)
         enc32x = x
         return [enc2x, enc4x, enc8x, enc16x, enc32x]
 
