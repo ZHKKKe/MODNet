@@ -20,6 +20,7 @@ WebCam Video Demo [<a href="demo/video_matting/webcam">Offline</a>][<a href="htt
 
 
 ## News
+- [Mar 12 2021] Add [TorchScript version](torchscript) of MODNet (from the community).
 - [Feb 19 2021] Add [ONNX version](onnx) of MODNet (from the community).
 - [Jan&nbsp; 28 2021] Release the [code](src/trainer.py) of MODNet training iteration.
 - [Dec 25 2020] ***Merry Christmas!*** :christmas_tree: Release Custom Video Matting Demo [[Offline](demo/video_matting/custom)] for user videos.
@@ -45,10 +46,10 @@ It allows you to upload portrait images and predict/visualize/download the alpha
 
 
 ### Community
-Here we share some cool applications of MODNet built by the community.
+Here we share some cool applications/extentions of MODNet built by the community.
 
 - **WebGUI for Image Matting**  
-You can try [this WebGUI](https://gradio.app/g/modnet) (hosted on [Gradio](https://www.gradio.app/)) for portrait matting from your browser without any code! 
+You can try [this WebGUI](https://gradio.app/g/modnet) (hosted on [Gradio](https://www.gradio.app/)) for portrait matting from your browser without code! 
 <!-- <img src="https://i.ibb.co/9gLxFXF/modnet.gif" width='40%'> -->
 
 - **Colab Demo of Bokeh (Blur Background)**  
@@ -56,6 +57,10 @@ You can try [this Colab demo](https://colab.research.google.com/github/eyaler/av
 
 - **ONNX Version of MODNet**  
 You can convert the pre-trained MODNet to an ONNX model by using [this code](onnx) (provided by [@manthan3C273](https://github.com/manthan3C273)). You can also try [this Colab demo](https://colab.research.google.com/drive/1P3cWtg8fnmu9karZHYDAtmm1vj1rgA-f?usp=sharing) for MODNet image matting (ONNX version).
+
+- **TorchScript Version of MODNet**  
+You can convert the pre-trained MODNet to an TorchScript model by using [this code](torchscript) (provided by [@yarkable](https://github.com/yarkable)). 
+
 
 ## Code
 We provide the [code](src/trainer.py) of MODNet training iteration, including:
@@ -79,7 +84,7 @@ This project (**code, pre-trained models, demos, *etc.***) is released under the
 ## Acknowledgement
 - We thank [City University of Hong Kong](https://www.cityu.edu.hk/) and [SenseTime](https://www.sensetime.com/) for their support to this project.  
 - We thank  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[the Gradio team](https://github.com/gradio-app/gradio), [@eyaler](https://github.com/eyaler), [@manthan3C273](https://github.com/manthan3C273),  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[the Gradio team](https://github.com/gradio-app/gradio), [@eyaler](https://github.com/eyaler), [@manthan3C273](https://github.com/manthan3C273),  [@yarkable](https://github.com/yarkable),  
 for their contributions to this repository or their cool applications based on MODNet.
 
 
