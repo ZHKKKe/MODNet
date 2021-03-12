@@ -20,8 +20,8 @@ WebCam Video Demo [<a href="demo/video_matting/webcam">Offline</a>][<a href="htt
 
 
 ## News
-- [Mar 12 2021] Add [TorchScript version](torchscript) of MODNet (from the community).
-- [Feb 19 2021] Add [ONNX version](onnx) of MODNet (from the community).
+- [Mar 12 2021] Support [TorchScript version](torchscript) of MODNet (from the community).
+- [Feb 19 2021] Support [ONNX version](onnx) of MODNet (from the community).
 - [Jan&nbsp; 28 2021] Release the [code](src/trainer.py) of MODNet training iteration.
 - [Dec 25 2020] ***Merry Christmas!*** :christmas_tree: Release Custom Video Matting Demo [[Offline](demo/video_matting/custom)] for user videos.
 - [Dec 10 2020] Release WebCam Video Matting Demo [[Offline](demo/video_matting/webcam)][[Colab](https://colab.research.google.com/drive/1Pt3KDSc2q7WxFvekCnCLD8P0gBEbxm6J?usp=sharing)] and Image Matting Demo [[Colab](https://colab.research.google.com/drive/1GANpbKT06aEFiW-Ssx0DQnnEADcXwQG6?usp=sharing)].
