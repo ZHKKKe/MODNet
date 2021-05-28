@@ -9,7 +9,7 @@
 
 <p align="center">
 WebCam Video Demo [<a href="demo/video_matting/webcam">Offline</a>][<a href="https://colab.research.google.com/drive/1Pt3KDSc2q7WxFvekCnCLD8P0gBEbxm6J?usp=sharing">Colab</a>] | Custom Video Demo [<a href="demo/video_matting/custom">Offline</a>] |
-  Image Demo [<a href="https://gradio.app/g/modnet">WebGUI</a>][<a href="https://colab.research.google.com/drive/1GANpbKT06aEFiW-Ssx0DQnnEADcXwQG6?usp=sharing">Colab</a>]
+  Image Demo [<a href="https://www.gradio.app/hub/aliabd/modnet">WebGUI</a>][<a href="https://colab.research.google.com/drive/1GANpbKT06aEFiW-Ssx0DQnnEADcXwQG6?usp=sharing">Colab</a>]
 </p>
 
 <div align="center">This is the official project of our paper <b>Is a Green Screen Really Necessary for Real-Time Portrait Matting?</b></div>
@@ -49,7 +49,7 @@ It allows you to upload portrait images and predict/visualize/download the alpha
 Here we share some cool applications/extentions of MODNet built by the community.
 
 - **WebGUI for Image Matting**  
-You can try [this WebGUI](https://gradio.app/g/modnet) (hosted on [Gradio](https://www.gradio.app/)) for portrait matting from your browser without code! 
+You can try [this WebGUI](https://www.gradio.app/hub/aliabd/modnet) (hosted on [Gradio](https://www.gradio.app/)) for portrait matting from your browser without code! 
 <!-- <img src="https://i.ibb.co/9gLxFXF/modnet.gif" width='40%'> -->
 
 - **Colab Demo of Bokeh (Blur Background)**  
