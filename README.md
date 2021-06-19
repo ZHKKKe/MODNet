@@ -38,14 +38,6 @@ Our commercial solution for portrait matting is coming!
 A **Single** Model! Only **7M**! Process **2K** resolution image with a **Fast** speed on common PCs or Mobiles!  
 **单个**模型！大小仅为**7M**！可以在普通PC或移动设备上**快速**处理具有**2K**分辨率的图像！ 
 
-<!-- Here are two example videos processed (frame independently) via our **portrait image matting** model:  
-我们**图片抠像**模型逐帧单独处理的两个示例视频: 
-
-<img src="doc/gif/commercial_image_matting_model_result.gif" width='100%'>
-
-<br>
-<br> -->
-
 Now you can try the Beta version of our **portrait image matting** online via [this website](https://sight-x.cn/portrait_matting).  
 (As our current server for testing is hosted in China, your access may be delayed.)  
 现在，您可以通过[此网站](https://sight-x.cn/portrait_matting)在线使用我们的**图片抠像**测试版。  
@@ -60,6 +52,11 @@ The commercial API interface for **portrait image matting** will be available so
 
 If you are interest in a **portrait image matting SDK**, please contact `bussiness@sight-x.com`.  
 如果您对**图片抠像SDK**感兴趣，请联系`bussiness@sight-x.com`。
+
+Here are two example videos processed (frame independently) via our **portrait image matting** model:  
+我们**图片抠像**模型逐帧单独处理的两个示例视频: 
+
+<img src="doc/gif/commercial_image_matting_model_result.gif" width='100%'>
 
 
 ### Portrait Video Matting Solution (视频抠像方案)
