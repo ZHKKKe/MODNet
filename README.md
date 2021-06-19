@@ -1,56 +1,100 @@
-<h2 align="center">MODNet: Is a Green Screen Really Necessary for Real-Time Portrait Matting?</h2>
+<h2 align="center">MODNet: Trimap-Free Portrait Matting in Real Time</h2>
 
 <img src="doc/gif/homepage_demo.gif" width="100%">
 
+<div align="center">MODNet is a model for <b>real-time</b> portrait matting with <b>only RGB image input</b>.</div>
+<div align="center">MODNet是一个<b>仅需RGB图片输入</b>的<b>实时</b>人像抠图模型。</div>
+
+<br />
+
 <p align="center">
+  <a href="#commercial-solution-商用方案">Commercial Solution (商用方案)</a> |
+  <a href="#research-demo">Research Demo</a> | 
   <a href="https://arxiv.org/pdf/2011.11961.pdf">Arxiv Preprint</a> |
   <a href="https://youtu.be/PqJ3BRHX3Lc">Supplementary Video</a>
 </p>
 
 <p align="center">
-WebCam Video Demo [<a href="demo/video_matting/webcam">Offline</a>][<a href="https://colab.research.google.com/drive/1Pt3KDSc2q7WxFvekCnCLD8P0gBEbxm6J?usp=sharing">Colab</a>] | Custom Video Demo [<a href="demo/video_matting/custom">Offline</a>] |
-  Image Demo [<a href="https://www.gradio.app/hub/aliabd/modnet">WebGUI</a>][<a href="https://colab.research.google.com/drive/1GANpbKT06aEFiW-Ssx0DQnnEADcXwQG6?usp=sharing">Colab</a>]
+  <a href="#community">Community</a> |
+  <a href="#code">Code</a> |
+  <a href="#ppm-benchmark">PPM Benchmark</a> | 
+  <a href="#license">License</a> | 
+  <a href="#acknowledgement">Acknowledgement</a> | 
+  <a href="#citation">Citation</a> | 
+  <a href="#contact">Contact</a>
 </p>
-
-<div align="center">This is the official project of our paper <b>Is a Green Screen Really Necessary for Real-Time Portrait Matting?</b></div>
-<div align="center">MODNet is a <b>trimap-free</b> model for portrait matting in <b>real time</b> under <b>changing scenes</b>.</div>
 
 
 ---
 
 
-## News
-- [Mar 12 2021] Support [TorchScript version](torchscript) of MODNet (from the community).
-- [Feb 19 2021] Support [ONNX version](onnx) of MODNet (from the community).
-- [Jan&nbsp; 28 2021] Release the [code](src/trainer.py) of MODNet training iteration.
-- [Dec 25 2020] ***Merry Christmas!*** :christmas_tree: Release Custom Video Matting Demo [[Offline](demo/video_matting/custom)] for user videos.
-- [Dec 10 2020] Release WebCam Video Matting Demo [[Offline](demo/video_matting/webcam)][[Colab](https://colab.research.google.com/drive/1Pt3KDSc2q7WxFvekCnCLD8P0gBEbxm6J?usp=sharing)] and Image Matting Demo [[Colab](https://colab.research.google.com/drive/1GANpbKT06aEFiW-Ssx0DQnnEADcXwQG6?usp=sharing)].
-- [Nov 24 2020] Release [Arxiv Preprint](https://arxiv.org/pdf/2011.11961.pdf) and [Supplementary Video](https://youtu.be/PqJ3BRHX3Lc).
+## Commercial Solution (商用方案)
+
+Our commercial solution for portrait matting is coming!  
+我们的人像抠图商用方案来了！ 
+
+### Portrait Image Matting Solution (图片抠像方案)
+
+A **Single** Model! Only **7M**! Process **2K** resolution image with a **Fast** speed on common PCs or Mobiles!  
+**单个**模型！大小仅为**7M**！可以在普通PC或移动设备上**快速**处理具有**2K**分辨率的图像！ 
+
+<!-- Here are two example videos processed (frame independently) via our **portrait image matting** model:  
+我们**图片抠像**模型逐帧单独处理的两个示例视频: 
+
+<img src="doc/gif/commercial_image_matting_model_result.gif" width='100%'>
+
+<br>
+<br> -->
+
+Now you can try the Beta version of our **portrait image matting** online via [this website](https://sight-x.cn/portrait_matting).  
+(As our current server for testing is hosted in China, your access may be delayed.)  
+现在，您可以通过[此网站](https://sight-x.cn/portrait_matting)在线使用我们的**图片抠像**测试版。  
+
+<img src="doc/gif/commercial_image_matting_website.gif" width='100%'>
+
+<!-- You can also scan the QR code below to try the WeChat Mini-Program based on our model.  
+您也可以扫描下方二维码尝试基于我们模型的微信小程序。 -->
+
+The commercial API interface for **portrait image matting** will be available soon.  
+用于**图片抠像**的商用API接口即将推出。
+
+If you are interest in a **portrait image matting SDK**, please contact `bussiness@sight-x.com`.  
+如果您对**图片抠像SDK**感兴趣，请联系`bussiness@sight-x.com`。
 
 
-## Demos
+### Portrait Video Matting Solution (视频抠像方案)
 
-### Video Matting
+Stay tuned.  
+敬请期待。
+
+
+---
+
+
+## Research Demo
+
+All the models behind the following demos are trained on the datasets mentioned in [our paper](https://arxiv.org/pdf/2011.11961.pdf). 
+
+### Portrait Image Matting
+We provide an [online Colab demo](https://colab.research.google.com/drive/1GANpbKT06aEFiW-Ssx0DQnnEADcXwQG6?usp=sharing) for portrait image matting.  
+It allows you to upload portrait images and predict/visualize/download the alpha mattes. 
+
+<!-- <img src="doc/gif/image_matting_demo.gif" width='40%'> -->
+
+### Portrait Video Matting
 We provide two real-time portrait video matting demos based on WebCam. When using the demo, you can move the WebCam around at will. 
 If you have an Ubuntu system, we recommend you to try the [offline demo](demo/video_matting/webcam) to get a higher *fps*. Otherwise, you can access the [online Colab demo](https://colab.research.google.com/drive/1Pt3KDSc2q7WxFvekCnCLD8P0gBEbxm6J?usp=sharing).  
 We also provide an [offline demo](demo/video_matting/custom) that allows you to process custom videos.
 
-<img src="doc/gif/video_matting_demo.gif" width='60%'>
+<!-- <img src="doc/gif/video_matting_demo.gif" width='60%'> -->
 
 
-### Image Matting
-We provide an [online Colab demo](https://colab.research.google.com/drive/1GANpbKT06aEFiW-Ssx0DQnnEADcXwQG6?usp=sharing) for portrait image matting.  
-It allows you to upload portrait images and predict/visualize/download the alpha mattes. 
+## Community
 
-<img src="doc/gif/image_matting_demo.gif" width='40%'>
+We share some cool applications/extentions of MODNet built by the community.
 
-
-### Community
-Here we share some cool applications/extentions of MODNet built by the community.
-
-- **WebGUI for Image Matting**  
-You can try [this WebGUI](https://www.gradio.app/hub/aliabd/modnet) (hosted on [Gradio](https://www.gradio.app/)) for portrait matting from your browser without code! 
-<!-- <img src="https://i.ibb.co/9gLxFXF/modnet.gif" width='40%'> -->
+- **WebGUI for Portrait Image Matting**  
+You can try [this WebGUI](https://www.gradio.app/hub/aliabd/modnet) (hosted on [Gradio](https://www.gradio.app/)) for portrait image matting from your browser without code! 
 
 - **Colab Demo of Bokeh (Blur Background)**  
 You can try [this Colab demo](https://colab.research.google.com/github/eyaler/avatars4all/blob/master/yarok.ipynb) (built by [@eyaler](https://github.com/eyaler)) to blur the backgroud based on MODNet!
@@ -61,31 +105,37 @@ You can convert the pre-trained MODNet to an ONNX model by using [this code](onn
 - **TorchScript Version of MODNet**  
 You can convert the pre-trained MODNet to an TorchScript model by using [this code](torchscript) (provided by [@yarkable](https://github.com/yarkable)). 
 
+- **TensorRT Version of MODNet**  
+You can access [this Github repository](https://github.com/jkjung-avt/tensorrt_demos) to try the TensorRT version of MODNet (provided by [@jkjung-avt](https://github.com/jkjung-avt)).
+
+
+There are some resources about MODNet from the community.
+- [Video from What's AI YouTube Channel](https://youtu.be/rUo0wuVyefU)
+- [Article from Louis Bouchard's Blog](https://www.louisbouchard.ai/remove-background/)
+
 
 ## Code
 We provide the [code](src/trainer.py) of MODNet training iteration, including:
 - **Supervised Training**: Train MODNet on a labeled matting dataset
 - **SOC Adaptation**: Adapt a trained MODNet to an unlabeled dataset
 
-In the function comments, we provide examples of how to call the function.  
+In the code comments, we provide examples for using the functions.  
 
 
-## TODO
-- Release the code of One-Frame Delay
-- Release PPM-100 validation benchmark (**Delayed, But On The Way...**)  
-**NOTE**: PPM-100 is a **validation set**. Our training set will not be published.
+## PPM Benchmark
+The PPM benchmark will be released in a separate repository [PPM](https://github.com/ZHKKKe/PPM).  
 
 
 ## License
-This project (**code, pre-trained models, demos, *etc.***) is released under the [Creative Commons Attribution NonCommercial ShareAlike 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode) license.
+All resources in this repository (code, models, demos, *etc.*) are released under the [Creative Commons Attribution NonCommercial ShareAlike 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode) license.  
+The license will be changed to allow commercial use after our paper is accepted.
 
-**NOTE**: The license will be changed to allow commercial use after this work is accepted by a conference or a journal.
 
-## Acknowledgement
-- We thank [City University of Hong Kong](https://www.cityu.edu.hk/) and [SenseTime](https://www.sensetime.com/) for their support to this project.  
+## Acknowledgement  
 - We thank  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[the Gradio team](https://github.com/gradio-app/gradio), [@eyaler](https://github.com/eyaler), [@manthan3C273](https://github.com/manthan3C273),  [@yarkable](https://github.com/yarkable),  
-for their contributions to this repository or their cool applications based on MODNet.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[@eyaler](https://github.com/eyaler), [@manthan3C273](https://github.com/manthan3C273),  [@yarkable](https://github.com/yarkable), [@jkjung-avt](https://github.com/jkjung-avt),  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[the Gradio team](https://github.com/gradio-app/gradio), [What's AI YouTube Channel](https://www.youtube.com/channel/UCUzGQrN-lyyc0BWTYoJM_Sg), [Louis Bouchard's Blog](https://www.louisbouchard.ai),  
+for their contributions to this repository or their cool applications/extentions/resources of MODNet.
 
 
 ## Citation
@@ -103,5 +153,6 @@ If this work helps your research, please consider to cite:
 
 
 ## Contact
-This project is currently maintained by Zhanghan Ke ([@ZHKKKe](https://github.com/ZHKKKe)).  
-If you have any questions, please feel free to contact `kezhanghan@outlook.com`.
+This repository is currently maintained by Zhanghan Ke ([@ZHKKKe](https://github.com/ZHKKKe)).  
+For commercial questions, please contact `bussiness@sight-x.com`.  
+For research questions, please contact `kezhanghan@outlook.com`.
