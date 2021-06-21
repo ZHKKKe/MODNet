@@ -151,5 +151,5 @@ If this work helps your research, please consider to cite:
 
 ## Contact
 This repository is currently maintained by Zhanghan Ke ([@ZHKKKe](https://github.com/ZHKKKe)).  
-For commercial questions, please contact `bussiness@sight-x.com`.  
+For commercial questions, please contact `business@sight-x.com`.  
 For research questions, please contact `kezhanghan@outlook.com`.
