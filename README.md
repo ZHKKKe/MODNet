@@ -50,8 +50,8 @@ Now you can try the Beta version of our **portrait image matting** online via [t
 The commercial API interface for **portrait image matting** will be available soon.  
 用于**图片抠像**的商用API接口即将推出。
 
-If you are interest in a **portrait image matting SDK**, please contact `bussiness@sight-x.com`.  
-如果您对**图片抠像SDK**感兴趣，请联系`bussiness@sight-x.com`。
+If you are interest in a **portrait image matting SDK**, please contact `business@sight-x.com`.  
+如果您对**图片抠像SDK**感兴趣，请联系`business@sight-x.com`。
 
 Here are two example videos processed (frame independently) via our **portrait image matting** model:  
 我们**图片抠像**模型逐帧单独处理的两个示例视频: 
