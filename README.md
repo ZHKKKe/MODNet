@@ -47,15 +47,15 @@ Now you can try our **portrait image matting** online via [this website](https:/
 您也可以扫描下方二维码尝试基于我们模型的微信小程序。 -->
 
 The API interface for **portrait image matting** is published on [RapidAPI - Portrait Solo](https://rapidapi.com/sight-x-technology-sight-x-technology-default/api/portrait-solo/). Pay-as-you-go for small-scale use at affordable prices.  
-**图片抠像**的商用API接口已发布在[RapidAPI - Portrait Solo](https://rapidapi.com/sight-x-technology-sight-x-technology-default/api/portrait-solo/)。适合小规模使用的按需付费，价格实惠。
+**图片抠像**的商用API接口已发布在[RapidAPI - Portrait Solo](https://rapidapi.com/sight-x-technology-sight-x-technology-default/api/portrait-solo/)。适合小规模使用的按需付费。
 
 If you are interest in a **portrait image matting SDK**, please contact `business@sight-x.com`.  
 如果您对**图片抠像SDK**感兴趣，请联系`business@sight-x.com`。
 
-Here are two example videos processed (frame independently) via our **portrait image matting** model:  
+<!-- Here are two example videos processed (frame independently) via our **portrait image matting** model:  
 我们**图片抠像**模型逐帧单独处理的两个示例视频: 
 
-<img src="doc/gif/commercial_image_matting_model_result.gif" width='100%'>
+<img src="doc/gif/commercial_image_matting_model_result.gif" width='100%'> -->
 
 
 ### Portrait Video Matting Solution (视频抠像方案)
