@@ -30,25 +30,24 @@
 
 ## Commercial Solution (商用方案)
 
-Our commercial solution for portrait matting is coming!  
-我们的人像抠图商用方案来了！ 
+The commercial solution for portrait matting is coming!  
+人像抠图商用方案发布了！ 
 
 ### Portrait Image Matting Solution (图片抠像方案)
 
 A **Single** Model! Only **7M**! Process **2K** resolution image with a **Fast** speed on common PCs or Mobiles!  
 **单个**模型！大小仅为**7M**！可以在普通PC或移动设备上**快速**处理具有**2K**分辨率的图像！ 
 
-Now you can try the Beta version of our **portrait image matting** online via [this website](https://sight-x.cn/portrait_matting).  
-(As our current server for testing is hosted in China, your access may be delayed.)  
-现在，您可以通过[此网站](https://sight-x.cn/portrait_matting)在线使用我们的**图片抠像**测试版。  
+Now you can try our **portrait image matting** online via [this website](https://sight-x.cn/portrait_matting).  
+现在，您可以通过[此网站](https://sight-x.cn/portrait_matting)在线使用我们的**图片抠像**功能。  
 
 <img src="doc/gif/commercial_image_matting_website.gif" width='100%'>
 
 <!-- You can also scan the QR code below to try the WeChat Mini-Program based on our model.  
 您也可以扫描下方二维码尝试基于我们模型的微信小程序。 -->
 
-The commercial API interface for **portrait image matting** will be available soon.  
-用于**图片抠像**的商用API接口即将推出。
+The API interface for **portrait image matting** is published on [RapidAPI - Portrait Solo](https://rapidapi.com/sight-x-technology-sight-x-technology-default/api/portrait-solo/). Pay-as-you-go for small-scale use at affordable prices.  
+**图片抠像**的商用API接口已发布在[RapidAPI - Portrait Solo](https://rapidapi.com/sight-x-technology-sight-x-technology-default/api/portrait-solo/)。适合小规模使用的按需付费，价格实惠。
 
 If you are interest in a **portrait image matting SDK**, please contact `business@sight-x.com`.  
 如果您对**图片抠像SDK**感兴趣，请联系`business@sight-x.com`。
