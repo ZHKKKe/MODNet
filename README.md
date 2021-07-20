@@ -24,6 +24,7 @@
   <a href="#contact">Contact</a>
 </p>
 
+**News:** The PPM-100 benchmark is released in [this repository](https://github.com/ZHKKKe/PPM)!
 
 ---
 
@@ -46,11 +47,11 @@ Now you can try our **portrait image matting** online via [this website](https:/
 <!-- You can also scan the QR code below to try the WeChat Mini-Program based on our model.  
 您也可以扫描下方二维码尝试基于我们模型的微信小程序。 -->
 
-The API interface for **portrait image matting** is published on [RapidAPI - Portrait Solo](https://rapidapi.com/sight-x-technology-sight-x-technology-default/api/portrait-solo/). Pay-as-you-go for small-scale use at affordable prices.  
-**图片抠像**的商用API接口已发布在[RapidAPI - Portrait Solo](https://rapidapi.com/sight-x-technology-sight-x-technology-default/api/portrait-solo/)。适合小规模使用的按需付费。
+The API interface for **portrait image matting** is published on [RapidAPI - Portrait Solo](https://rapidapi.com/sight-x-technology-sight-x-technology-default/api/portrait-solo/).  
+**图片抠像**的商用API接口已发布在[RapidAPI - Portrait Solo](https://rapidapi.com/sight-x-technology-sight-x-technology-default/api/portrait-solo/)。
 
-If you are interest in a **portrait image matting SDK**, please contact `business@sight-x.com`.  
-如果您对**图片抠像SDK**感兴趣，请联系`business@sight-x.com`。
+<!-- If you are interest in a **portrait image matting SDK**, please contact `business@sight-x.com`.  
+如果您对**图片抠像SDK**感兴趣，请联系`business@sight-x.com`。 -->
 
 <!-- Here are two example videos processed (frame independently) via our **portrait image matting** model:  
 我们**图片抠像**模型逐帧单独处理的两个示例视频: 
@@ -119,7 +120,7 @@ In the code comments, we provide examples for using the functions.
 
 
 ## PPM Benchmark
-The PPM benchmark will be released in a separate repository [PPM](https://github.com/ZHKKKe/PPM).  
+The PPM benchmark is released in a separate repository [PPM](https://github.com/ZHKKKe/PPM).  
 
 
 ## License
