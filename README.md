@@ -8,7 +8,7 @@
 <br />
 
 <p align="center">
-  <a href="#commercial-solution-商用方案">Commercial Solution (商用方案)</a> |
+  <a href="#online-solution-在线方案">Online Solution (在线方案)</a> |
   <a href="#research-demo">Research Demo</a> | 
   <a href="https://arxiv.org/pdf/2011.11961.pdf">Arxiv Preprint</a> |
   <a href="https://youtu.be/PqJ3BRHX3Lc">Supplementary Video</a>
@@ -29,10 +29,10 @@
 ---
 
 
-## Commercial Solution (商用方案)
+## Online Solution (在线方案)
 
-The commercial solution for portrait matting is coming!  
-人像抠图商用方案发布了！ 
+The online solution for portrait matting is coming!  
+人像抠图在线方案发布了！ 
 
 ### Portrait Image Matting Solution (图片抠像方案)
 
@@ -47,25 +47,19 @@ Now you can try our **portrait image matting** online via [this website](https:/
 <!-- You can also scan the QR code below to try the WeChat Mini-Program based on our model.  
 您也可以扫描下方二维码尝试基于我们模型的微信小程序。 -->
 
-The API interface for **portrait image matting** is published on [RapidAPI - Portrait Solo](https://rapidapi.com/sight-x-technology-sight-x-technology-default/api/portrait-solo/).  
-**图片抠像**的商用API接口已发布在[RapidAPI - Portrait Solo](https://rapidapi.com/sight-x-technology-sight-x-technology-default/api/portrait-solo/)。
-
-<!-- If you are interest in a **portrait image matting SDK**, please contact `business@sight-x.com`.  
-如果您对**图片抠像SDK**感兴趣，请联系`business@sight-x.com`。 -->
-
 <!-- Here are two example videos processed (frame independently) via our **portrait image matting** model:  
 我们**图片抠像**模型逐帧单独处理的两个示例视频: 
 
 <img src="doc/gif/commercial_image_matting_model_result.gif" width='100%'> -->
 
 
-### Portrait Video Matting Solution (视频抠像方案)
+<!-- ### Portrait Video Matting Solution (视频抠像方案)
 
 Stay tuned.  
 敬请期待。
+ -->
 
-
----
+<!-- --- -->
 
 
 ## Research Demo
@@ -151,5 +145,4 @@ If this work helps your research, please consider to cite:
 
 ## Contact
 This repository is currently maintained by Zhanghan Ke ([@ZHKKKe](https://github.com/ZHKKKe)).  
-For commercial questions, please contact `business@sight-x.com`.  
-For research questions, please contact `kezhanghan@outlook.com`.
+For questions, please contact `kezhanghan@outlook.com`.
