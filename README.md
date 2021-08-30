@@ -24,7 +24,8 @@
   <a href="#contact">Contact</a>
 </p>
 
-**News:** The PPM-100 benchmark is released in [this repository](https://github.com/ZHKKKe/PPM)!
+**News:** We create a repository for our new model [MODNet-V](https://github.com/ZHKKKe/MODNet-V) that focuses on faster and better portrait video matting.  
+**News:** The PPM-100 benchmark is released in [this repository](https://github.com/ZHKKKe/PPM).
 
 ---
 
