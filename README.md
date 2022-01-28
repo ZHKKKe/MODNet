@@ -1,16 +1,18 @@
 <h2 align="center">MODNet: Trimap-Free Portrait Matting in Real Time</h2>
 
+<div align="center"><i>MODNet: Real-Time Trimap-Free Portrait Matting via Objective Decomposition (AAAI 2022)</i></div>
+
 <img src="doc/gif/homepage_demo.gif" width="100%">
 
-<div align="center">MODNet is a model for <b>real-time</b> portrait matting with <b>only RGB image input</b>.</div>
-<div align="center">MODNet是一个<b>仅需RGB图片输入</b>的<b>实时</b>人像抠图模型。</div>
+<div align="center">MODNet is a model for <b>real-time</b> portrait matting with <b>only RGB image input</b></div>
+<div align="center">MODNet是一个<b>仅需RGB图片输入</b>的<b>实时</b>人像抠图模型</div>
 
 <br />
 
 <p align="center">
-  <a href="#online-solution-在线方案">Online Solution (在线方案)</a> |
+  <a href="#online-application-在线应用">Online Application (在线应用)</a> |
   <a href="#research-demo">Research Demo</a> | 
-  <a href="https://arxiv.org/pdf/2011.11961.pdf">Arxiv Preprint</a> |
+  <a href="https://arxiv.org/pdf/2011.11961.pdf">AAAI 2022 Paper</a> |
   <a href="https://youtu.be/PqJ3BRHX3Lc">Supplementary Video</a>
 </p>
 
@@ -24,43 +26,16 @@
   <a href="#contact">Contact</a>
 </p>
 
-**News:** We create a repository for our new model [MODNet-V](https://github.com/ZHKKKe/MODNet-V) that focuses on faster and better portrait video matting.  
-**News:** The PPM-100 benchmark is released in [this repository](https://github.com/ZHKKKe/PPM).
-
 ---
 
 
-## Online Solution (在线方案)
+## Online Application (在线应用)
 
-The online solution for portrait matting is coming!  
-人像抠图在线方案发布了！ 
+A **Single** model! Only **7M**! Process **2K** resolution image with a **Fast** speed on common PCs or Mobiles! **Beter** performance than research demos!  
+Please try online portrait image matting via [this website](https://sight-x.cn/portrait_matting)!    
 
-### Portrait Image Matting Solution (图片抠像方案)
-
-A **Single** Model! Only **7M**! Process **2K** resolution image with a **Fast** speed on common PCs or Mobiles!  
-**单个**模型！大小仅为**7M**！可以在普通PC或移动设备上**快速**处理具有**2K**分辨率的图像！ 
-
-Now you can try our **portrait image matting** online via [this website](https://sight-x.cn/portrait_matting).  
-现在，您可以通过[此网站](https://sight-x.cn/portrait_matting)在线使用我们的**图片抠像**功能。  
-
-<img src="doc/gif/commercial_image_matting_website.gif" width='100%'>
-
-<!-- You can also scan the QR code below to try the WeChat Mini-Program based on our model.  
-您也可以扫描下方二维码尝试基于我们模型的微信小程序。 -->
-
-<!-- Here are two example videos processed (frame independently) via our **portrait image matting** model:  
-我们**图片抠像**模型逐帧单独处理的两个示例视频: 
-
-<img src="doc/gif/commercial_image_matting_model_result.gif" width='100%'> -->
-
-
-<!-- ### Portrait Video Matting Solution (视频抠像方案)
-
-Stay tuned.  
-敬请期待。
- -->
-
-<!-- --- -->
+**单个**模型！大小仅为**7M**！可以在普通PC或移动设备上**快速**处理具有**2K**分辨率的图像！效果比研究示例**更好**！  
+请通过[此网站](https://sight-x.cn/portrait_matting)在线尝试图片抠像！
 
 
 ## Research Demo
@@ -111,7 +86,7 @@ We provide the [code](src/trainer.py) of MODNet training iteration, including:
 - **Supervised Training**: Train MODNet on a labeled matting dataset
 - **SOC Adaptation**: Adapt a trained MODNet to an unlabeled dataset
 
-In the code comments, we provide examples for using the functions.  
+In code comments, we provide examples for using the functions.  
 
 
 ## PPM Benchmark
@@ -119,13 +94,12 @@ The PPM benchmark is released in a separate repository [PPM](https://github.com/
 
 
 ## License
-All resources in this repository (code, models, demos, *etc.*) are released under the [Creative Commons Attribution NonCommercial ShareAlike 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode) license.  
-The license will be changed to allow commercial use after our paper is accepted.
+The code, models, and demos in this repository (excluding GIF files under the folder `doc/gif`) are released under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0) license.  
 
 
 ## Acknowledgement  
 - We thank  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[@eyaler](https://github.com/eyaler), [@manthan3C273](https://github.com/manthan3C273),  [@yarkable](https://github.com/yarkable), [@jkjung-avt](https://github.com/jkjung-avt),  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[@yzhou0919](https://github.com/yzhou0919), [@eyaler](https://github.com/eyaler), [@manthan3C273](https://github.com/manthan3C273),  [@yarkable](https://github.com/yarkable), [@jkjung-avt](https://github.com/jkjung-avt),  [@manzke](https://github.com/manzke),  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[the Gradio team](https://github.com/gradio-app/gradio), [What's AI YouTube Channel](https://www.youtube.com/channel/UCUzGQrN-lyyc0BWTYoJM_Sg), [Louis Bouchard's Blog](https://www.louisbouchard.ai),  
 for their contributions to this repository or their cool applications/extentions/resources of MODNet.
 
@@ -134,12 +108,11 @@ for their contributions to this repository or their cool applications/extentions
 If this work helps your research, please consider to cite:
 
 ```bibtex
-@article{MODNet,
-  author = {Zhanghan Ke and Kaican Li and Yurou Zhou and Qiuhua Wu and Xiangyu Mao and Qiong Yan and Rynson W.H. Lau},
-  title = {Is a Green Screen Really Necessary for Real-Time Portrait Matting?},
-  journal={ArXiv},
-  volume={abs/2011.11961},
-  year = {2020},
+@InProceedings{MODNet,
+  author = {Zhanghan Ke and Jiayu Sun and Kaican Li and Qiong Yan and Rynson W.H. Lau},
+  title = {MODNet: Real-Time Trimap-Free Portrait Matting via Objective Decomposition},
+  booktitle = {AAAI},
+  year = {2022},
 }
 ```
 
@@ -147,3 +120,5 @@ If this work helps your research, please consider to cite:
 ## Contact
 This repository is currently maintained by Zhanghan Ke ([@ZHKKKe](https://github.com/ZHKKKe)).  
 For questions, please contact `kezhanghan@outlook.com`.
+
+<img src="doc/gif/commercial_image_matting_model_result.gif" width='100%'>
