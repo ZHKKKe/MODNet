@@ -2,6 +2,8 @@
 
 <div align="center"><i>MODNet: Real-Time Trimap-Free Portrait Matting via Objective Decomposition (AAAI 2022)</i></div>
 
+<br />
+
 <img src="doc/gif/homepage_demo.gif" width="100%">
 
 <div align="center">MODNet is a model for <b>real-time</b> portrait matting with <b>only RGB image input</b></div>
@@ -31,7 +33,7 @@
 
 ## Online Application (在线应用)
 
-A **Single** model! Only **7M**! Process **2K** resolution image with a **Fast** speed on common PCs or Mobiles! **Beter** performance than research demos!  
+A **Single** model! Only **7M**! Process **2K** resolution image with a **Fast** speed on common PCs or Mobiles! **Beter** than research demos!  
 Please try online portrait image matting via [this website](https://sight-x.cn/portrait_matting)!    
 
 **单个**模型！大小仅为**7M**！可以在普通PC或移动设备上**快速**处理具有**2K**分辨率的图像！效果比研究示例**更好**！  
