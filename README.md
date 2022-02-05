@@ -13,7 +13,7 @@
 
 <p align="center">
   <a href="#online-application-在线应用">Online Application (在线应用)</a> |
-  <a href="#research-demo">Research Demo</a> | 
+  <a href="#research-demo">Research Demo</a> |
   <a href="https://arxiv.org/pdf/2011.11961.pdf">AAAI 2022 Paper</a> |
   <a href="https://youtu.be/PqJ3BRHX3Lc">Supplementary Video</a>
 </p>
@@ -21,10 +21,10 @@
 <p align="center">
   <a href="#community">Community</a> |
   <a href="#code">Code</a> |
-  <a href="#ppm-benchmark">PPM Benchmark</a> | 
-  <a href="#license">License</a> | 
-  <a href="#acknowledgement">Acknowledgement</a> | 
-  <a href="#citation">Citation</a> | 
+  <a href="#ppm-benchmark">PPM Benchmark</a> |
+  <a href="#license">License</a> |
+  <a href="#acknowledgement">Acknowledgement</a> |
+  <a href="#citation">Citation</a> |
   <a href="#contact">Contact</a>
 </p>
 
@@ -42,16 +42,16 @@ Please try online portrait image matting via [this website](https://sight-x.cn/p
 
 ## Research Demo
 
-All the models behind the following demos are trained on the datasets mentioned in [our paper](https://arxiv.org/pdf/2011.11961.pdf). 
+All the models behind the following demos are trained on the datasets mentioned in [our paper](https://arxiv.org/pdf/2011.11961.pdf).
 
 ### Portrait Image Matting
 We provide an [online Colab demo](https://colab.research.google.com/drive/1GANpbKT06aEFiW-Ssx0DQnnEADcXwQG6?usp=sharing) for portrait image matting.  
-It allows you to upload portrait images and predict/visualize/download the alpha mattes. 
+It allows you to upload portrait images and predict/visualize/download the alpha mattes.
 
 <!-- <img src="doc/gif/image_matting_demo.gif" width='40%'> -->
 
 ### Portrait Video Matting
-We provide two real-time portrait video matting demos based on WebCam. When using the demo, you can move the WebCam around at will. 
+We provide two real-time portrait video matting demos based on WebCam. When using the demo, you can move the WebCam around at will.
 If you have an Ubuntu system, we recommend you to try the [offline demo](demo/video_matting/webcam) to get a higher *fps*. Otherwise, you can access the [online Colab demo](https://colab.research.google.com/drive/1Pt3KDSc2q7WxFvekCnCLD8P0gBEbxm6J?usp=sharing).  
 We also provide an [offline demo](demo/video_matting/custom) that allows you to process custom videos.
 
@@ -62,8 +62,11 @@ We also provide an [offline demo](demo/video_matting/custom) that allows you to 
 
 We share some cool applications/extentions of MODNet built by the community.
 
+- **Docker Container for Portrait Image Matting**  
+You can try [this repository](https://github.com/nahidalam/MODNet-Docker) if you want a containerized version of the portrait matting solution.
+
 - **WebGUI for Portrait Image Matting**  
-You can try [this WebGUI](https://www.gradio.app/hub/aliabd/modnet) (hosted on [Gradio](https://www.gradio.app/)) for portrait image matting from your browser without code! 
+You can try [this WebGUI](https://www.gradio.app/hub/aliabd/modnet) (hosted on [Gradio](https://www.gradio.app/)) for portrait image matting from your browser without code!
 
 - **Colab Demo of Bokeh (Blur Background)**  
 You can try [this Colab demo](https://colab.research.google.com/github/eyaler/avatars4all/blob/master/yarok.ipynb) (built by [@eyaler](https://github.com/eyaler)) to blur the backgroud based on MODNet!
@@ -72,7 +75,7 @@ You can try [this Colab demo](https://colab.research.google.com/github/eyaler/av
 You can convert the pre-trained MODNet to an ONNX model by using [this code](onnx) (provided by [@manthan3C273](https://github.com/manthan3C273)). You can also try [this Colab demo](https://colab.research.google.com/drive/1P3cWtg8fnmu9karZHYDAtmm1vj1rgA-f?usp=sharing) for MODNet image matting (ONNX version).
 
 - **TorchScript Version of MODNet**  
-You can convert the pre-trained MODNet to an TorchScript model by using [this code](torchscript) (provided by [@yarkable](https://github.com/yarkable)). 
+You can convert the pre-trained MODNet to an TorchScript model by using [this code](torchscript) (provided by [@yarkable](https://github.com/yarkable)).
 
 - **TensorRT Version of MODNet**  
 You can access [this Github repository](https://github.com/jkjung-avt/tensorrt_demos) to try the TensorRT version of MODNet (provided by [@jkjung-avt](https://github.com/jkjung-avt)).
