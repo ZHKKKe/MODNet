@@ -79,7 +79,9 @@ class GaussianBlurLayer(nn.Module):
 # MODNet Training Functions
 # ----------------------------------------------------------------------------------
 
-blurer = GaussianBlurLayer(1, 3) #.cuda()
+blurer = GaussianBlurLayer(1, 3)  #.cuda
+if torch.cuda.is_available():
+    blurer.cuda()
 
 
 def supervised_training_iter(
@@ -317,6 +319,9 @@ if __name__ == '__main__':
     epochs = 40  # total epochs
 
     modnet = torch.nn.DataParallel(MODNet())  #.cuda()
+    if torch.cuda.is_available():
+        modnet = modnet.cuda()
+
     optimizer = torch.optim.SGD(modnet.parameters(), lr=lr, momentum=0.9)
     lr_scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=int(0.25 * epochs), gamma=0.1)
 

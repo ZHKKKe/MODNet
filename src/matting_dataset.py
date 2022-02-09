@@ -139,7 +139,13 @@ class Normalize(object):
 
 class ToTrainArray(object):
     def __call__(self, sample):
-        return [sample['image'], sample['trimap'], sample['gt_matte']]
+        device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+        image = sample['image'].to(device)
+        trimap = sample['trimap'].to(device)
+        gt_matte = sample['gt_matte'].to(device)
+
+        return [image, trimap, gt_matte]
+        # return [sample['image'], sample['trimap'], sample['gt_matte']]
 
 
 if __name__ == '__main__':
@@ -154,7 +160,7 @@ if __name__ == '__main__':
     transform = transforms.Compose([
         Rescale(512),
         ToTensor(),
-        Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
+        # Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
     ])
     mattingDataset = MattingDataset(transform=transform)
 

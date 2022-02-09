@@ -95,3 +95,5 @@ ENV/
 
 # Project files
 .vscode
+.idea/
+src/datasets/PPM-100
