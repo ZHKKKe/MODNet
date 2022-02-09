@@ -301,12 +301,15 @@ def soc_adaptation_iter(
 
 
 if __name__ == '__main__':
-    from matting_dataset import MattingDataset, Rescale, ToTensor, Normalize, ToTrainArray, ConvertImageDtype
+    from matting_dataset import MattingDataset, Rescale, \
+        ToTensor, Normalize, ToTrainArray, \
+        ConvertImageDtype, GenTrimap
     from torchvision import transforms
     from torch.utils.data import DataLoader
     from models.modnet import MODNet
     transform = transforms.Compose([
         Rescale(512),
+        GenTrimap(),
         ToTensor(),
         ConvertImageDtype(),
         Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)),
@@ -314,7 +317,7 @@ if __name__ == '__main__':
     ])
     mattingDataset = MattingDataset(transform=transform)
 
-    bs = 16  # batch size
+    bs = 4  # batch size
     lr = 0.01  # learn rate
     epochs = 40  # total epochs
 
@@ -327,13 +330,28 @@ if __name__ == '__main__':
 
     dataloader = DataLoader(mattingDataset,
                             batch_size=bs,
-                            shuffle=True,
-                            num_workers=0)
+                            shuffle=True)
 
     for epoch in range(0, epochs):
         for idx, (image, trimap, gt_matte) in enumerate(dataloader):
             semantic_loss, detail_loss, matte_loss = \
                 supervised_training_iter(modnet, optimizer, image, trimap, gt_matte)
             break
-        lr_scheduler.step()
-        break
+        if epoch % 4 == 0 and epoch > 1:
+            torch.save({
+                'epoch': epoch,
+                'model_state_dict': modnet.state_dict(),
+                'optimizer_state_dict': optimizer.state_dict(),
+                'loss': {'semantic_loss': semantic_loss, 'detail_loss': detail_loss, 'matte_loss': matte_loss},
+            }, f'pretrained/modnet_custom_portrait_matting_{epoch+1}.ckpt')
+            lr_scheduler.step()
+        print(f'semantic_loss: {semantic_loss:f}, detail_loss: {detail_loss:f}, matte_loss: {matte_loss:f}')
+        if epoch == 4:
+            break
+
+    torch.save({
+        'epoch': epochs,
+        'model_state_dict': modnet.state_dict(),
+        'optimizer_state_dict': optimizer.state_dict(),
+        'loss': {'semantic_loss': semantic_loss, 'detail_loss': detail_loss, 'matte_loss': matte_loss},
+    }, f'pretrained/modnet_custom_portrait_matting_last_epoch.ckpt')
