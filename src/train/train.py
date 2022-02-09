@@ -41,8 +41,8 @@ def train(modnet, datasetPath: str, batch_size: int, startEpoch: int, modelsPath
         pin_memory=True
     )
 
-    project = 'stask/modnet'
-    api_token = 'eyJhcGlfYWRkcmVzcyI6Imh0dHBzOi8vYXBwLm5lcHR1bmUuYWkiLCJhcGlfdXJsIjoiaHR0cHM6Ly9hcHAubmVwdHVuZS5haSIsImFwaV9rZXkiOiJmMmU1ZDZlZC00OWQ5LTQ0ODUtYmExMi0zN2M3MTA5ZmM4ZDcifQ=='
+    project = 'motionlearning/modnet'
+    api_token = 'eyJhcGlfYWRkcmVzcyI6Imh0dHBzOi8vYXBwLm5lcHR1bmUuYWkiLCJhcGlfdXJsIjoiaHR0cHM6Ly9hcHAubmVwdHVuZS5haSIsImFwaV9rZXkiOiI2NmJhMzJiMC1iY2M0LTQ5NGUtOGI0OS0yYzA4ZmNiNTRiMmEifQ=='
     neptuneRun = neptune.init(project = project,
                             api_token = api_token,
                             source_files=[])
