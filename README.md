@@ -62,9 +62,6 @@ We also provide an [offline demo](demo/video_matting/custom) that allows you to 
 
 We share some cool applications/extentions of MODNet built by the community.
 
-- **Docker Container for Portrait Image Matting**  
-You can try [this repository](https://github.com/nahidalam/modnet_docker) if you want a containerized version of the portrait matting solution.
-
 - **WebGUI for Portrait Image Matting**  
 You can try [this WebGUI](https://www.gradio.app/hub/aliabd/modnet) (hosted on [Gradio](https://www.gradio.app/)) for portrait image matting from your browser without code!
 
@@ -79,6 +76,9 @@ You can convert the pre-trained MODNet to an TorchScript model by using [this co
 
 - **TensorRT Version of MODNet**  
 You can access [this Github repository](https://github.com/jkjung-avt/tensorrt_demos) to try the TensorRT version of MODNet (provided by [@jkjung-avt](https://github.com/jkjung-avt)).
+
+- **Docker Container for MODnet**  
+You can access [this Github repository](https://github.com/nahidalam/modnet_docker) for a containerized version of MODNet with the Docker environment (provided by [@nahidalam](https://github.com/nahidalam)).
 
 
 There are some resources about MODNet from the community.
@@ -104,7 +104,7 @@ The code, models, and demos in this repository (excluding GIF files under the fo
 
 ## Acknowledgement  
 - We thank  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[@yzhou0919](https://github.com/yzhou0919), [@eyaler](https://github.com/eyaler), [@manthan3C273](https://github.com/manthan3C273),  [@yarkable](https://github.com/yarkable), [@jkjung-avt](https://github.com/jkjung-avt),  [@manzke](https://github.com/manzke),  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[@yzhou0919](https://github.com/yzhou0919), [@eyaler](https://github.com/eyaler), [@manthan3C273](https://github.com/manthan3C273),  [@yarkable](https://github.com/yarkable), [@jkjung-avt](https://github.com/jkjung-avt),  [@manzke](https://github.com/manzke),  [@nahidalam](https://github.com/nahidalam),  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[the Gradio team](https://github.com/gradio-app/gradio), [What's AI YouTube Channel](https://www.youtube.com/channel/UCUzGQrN-lyyc0BWTYoJM_Sg), [Louis Bouchard's Blog](https://www.louisbouchard.ai),  
 for their contributions to this repository or their cool applications/extentions/resources of MODNet.
 
