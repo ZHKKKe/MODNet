@@ -63,7 +63,7 @@ We also provide an [offline demo](demo/video_matting/custom) that allows you to 
 We share some cool applications/extentions of MODNet built by the community.
 
 - **Docker Container for Portrait Image Matting**  
-You can try [this repository](https://github.com/nahidalam/MODNet-Docker) if you want a containerized version of the portrait matting solution.
+You can try [this repository](https://github.com/nahidalam/modnet_docker) if you want a containerized version of the portrait matting solution.
 
 - **WebGUI for Portrait Image Matting**  
 You can try [this WebGUI](https://www.gradio.app/hub/aliabd/modnet) (hosted on [Gradio](https://www.gradio.app/)) for portrait image matting from your browser without code!
