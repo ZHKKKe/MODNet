@@ -45,14 +45,6 @@ class MattingDataset(Dataset):
 
 
 class Rescale(object):
-    """Rescale the image in a sample to a given size.
-
-    Args:
-        output_size (tuple or int): Desired output size. If tuple, output is
-            matched to output_size. If int, smaller of image edges is matched
-            to output_size keeping aspect ratio the same.
-    """
-
     def __init__(self, output_size):
         assert isinstance(output_size, (int, tuple))
         self.output_size = output_size
@@ -131,6 +123,7 @@ class Normalize(object):
         image = image.type(torch.FloatTensor)
         image = F.normalize(image, self.mean, self.std, self.inplace)
         sample['image'] = image
+        sample['gt_matte'] = sample['gt_matte'] / 255
         return sample
 
 
