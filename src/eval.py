@@ -1,8 +1,8 @@
 import numpy as np
 from glob import glob
-from src.models.modnet import MODNet
+from models.modnet import MODNet
 from PIL import Image
-from src.infer import predit_matte
+from infer import predit_matte
 import torch.nn as nn
 import torch
 
@@ -22,8 +22,8 @@ def cal_mse(pred, gt):
 
 
 def load_eval_dataset(dataset_root_dir='src/datasets/PPM-100'):
-    image_path = dataset_root_dir + '/image/*'
-    matte_path = dataset_root_dir + '/matte/*'
+    image_path = dataset_root_dir + '/val/fg/*'
+    matte_path = dataset_root_dir + '/val/alpha/*'
     image_file_name_list = glob(image_path)
     image_file_name_list = sorted(image_file_name_list)
     matte_file_name_list = glob(matte_path)

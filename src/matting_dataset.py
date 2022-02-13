@@ -13,8 +13,8 @@ class MattingDataset(Dataset):
     def __init__(self,
                  dataset_root_dir='src/datasets/PPM-100',
                  transform=None):
-        image_path = dataset_root_dir + '/image/*'
-        matte_path = dataset_root_dir + '/matte/*'
+        image_path = dataset_root_dir + '/train/fg/*'
+        matte_path = dataset_root_dir + '/train/alpha/*'
         image_file_name_list = glob(image_path)
         matte_file_name_list = glob(matte_path)
 
@@ -75,7 +75,7 @@ class GenTrimap(object):
         k_size = random.choice(range(2, 5))
         iterations = np.random.randint(5, 15)
         kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE,
-                                           (k_size, k_size))
+                                           (k_size, k_size))  # cv2.MORPH_RECT, cv2.MORPH_CROSS
         dilated = cv2.dilate(matte, kernel, iterations=iterations)
         eroded = cv2.erode(matte, kernel, iterations=iterations)
 
@@ -141,7 +141,7 @@ class ToTrainArray(object):
 if __name__ == '__main__':
 
     # test MattingDataset.gen_trimap
-    matte = Image.open('src/datasets/PPM-100/matte/6146816_556eaff97f_o.jpg')
+    matte = Image.open('src/datasets/PPM-100/train/alpha/6146816_556eaff97f_o.jpg')
     trimap1 = GenTrimap().gen_trimap(matte)
     trimap1 = np.array(trimap1) * 255
     trimap1 = np.uint8(trimap1)
