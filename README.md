@@ -34,10 +34,10 @@
 ## Online Application (在线应用)
 
 A **Single** model! Only **7M**! Process **2K** resolution image with a **Fast** speed on common PCs or Mobiles! **Beter** than research demos!  
-Please try online portrait image matting via [this website](https://sight-x.cn/portrait_matting)!    
+Please try online portrait image matting via [this website](https://sight-x.cn/portrait_matting) or on [my personal homepage](https://zhke.io/#/?modnet_demo)!    
 
 **单个**模型！大小仅为**7M**！可以在普通PC或移动设备上**快速**处理具有**2K**分辨率的图像！效果比研究示例**更好**！  
-请通过[此网站](https://sight-x.cn/portrait_matting)在线尝试图片抠像！
+请通过[此网站](https://sight-x.cn/portrait_matting)或[我的主页](https://zhke.io/#/?modnet_demo)在线尝试图片抠像！
 
 
 ## Research Demo
@@ -123,7 +123,7 @@ If this work helps your research, please consider to cite:
 
 
 ## Contact
-This repository is currently maintained by Zhanghan Ke ([@ZHKKKe](https://github.com/ZHKKKe)).  
+This repository is maintained by Zhanghan Ke ([@ZHKKKe](https://github.com/ZHKKKe)).  
 For questions, please contact `kezhanghan@outlook.com`.
 
 <img src="doc/gif/commercial_image_matting_model_result.gif" width='100%'>
