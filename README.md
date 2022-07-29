@@ -33,11 +33,11 @@
 
 ## Online Application (在线应用)
 
-A **Single** model! Only **7M**! Process **2K** resolution image with a **Fast** speed on common PCs or Mobiles! **Beter** than research demos!  
-Please try online portrait image matting via [this website](https://sight-x.cn/portrait_matting) or on [my personal homepage](https://zhke.io/#/?modnet_demo)!    
+The model used in the online demo (unpublished) is only **7M**! Process **2K** resolution image with a **Fast** speed on common PCs or Mobiles! **Beter** than research demos!  
+Please try online portrait image matting on [my personal homepage](https://zhke.io/#/?modnet_demo) for fun!    
 
-**单个**模型！大小仅为**7M**！可以在普通PC或移动设备上**快速**处理具有**2K**分辨率的图像！效果比研究示例**更好**！  
-请通过[此网站](https://sight-x.cn/portrait_matting)或[我的主页](https://zhke.io/#/?modnet_demo)在线尝试图片抠像！
+在线应用中使用的模型（未发布）大小仅为**7M**！可以在普通PC或移动设备上**快速**处理具有**2K**分辨率的图像！效果比研究示例**更好**！  
+请通过[我的主页](https://zhke.io/#/?modnet_demo)在线尝试图片抠像！
 
 
 ## Research Demo
@@ -62,8 +62,8 @@ We also provide an [offline demo](demo/video_matting/custom) that allows you to 
 
 We share some cool applications/extentions of MODNet built by the community.
 
-- **WebGUI for Portrait Image Matting**  
-You can try [this WebGUI](https://www.gradio.app/hub/aliabd/modnet) (hosted on [Gradio](https://www.gradio.app/)) for portrait image matting from your browser without code!
+<!-- - **WebGUI for Portrait Image Matting** --> 
+<!-- You can try [this WebGUI](https://www.gradio.app/hub/aliabd/modnet) (hosted on [Gradio](https://www.gradio.app/)) for portrait image matting from your browser without code! -->
 
 - **Colab Demo of Bokeh (Blur Background)**  
 You can try [this Colab demo](https://colab.research.google.com/github/eyaler/avatars4all/blob/master/yarok.ipynb) (built by [@eyaler](https://github.com/eyaler)) to blur the backgroud based on MODNet!
@@ -126,4 +126,4 @@ If this work helps your research, please consider to cite:
 This repository is maintained by Zhanghan Ke ([@ZHKKKe](https://github.com/ZHKKKe)).  
 For questions, please contact `kezhanghan@outlook.com`.
 
-<img src="doc/gif/commercial_image_matting_model_result.gif" width='100%'>
+<!-- <img src="doc/gif/commercial_image_matting_model_result.gif" width='100%'> -->
