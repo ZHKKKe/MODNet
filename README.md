@@ -80,6 +80,8 @@ You can access [this Github repository](https://github.com/jkjung-avt/tensorrt_d
 - **Docker Container for MODnet**  
 You can access [this Github repository](https://github.com/nahidalam/modnet_docker) for a containerized version of MODNet with the Docker environment (provided by [@nahidalam](https://github.com/nahidalam)).
 
+- **MNN/TNN/NCNN/ONNXRuntime C++ Version of MODNet**  
+You can access [this Github repository](https://github.com/DefTruth/lite.ai.toolkit) to try the MNN/TNN/NCNN/ONNXRuntime version of MODNet (provided by [@DefTruth](https://github.com/DefTruth)).
 
 There are some resources about MODNet from the community.
 - [Video from What's AI YouTube Channel](https://youtu.be/rUo0wuVyefU)
